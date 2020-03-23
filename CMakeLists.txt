@@ -15,4 +15,4 @@ add_library (add
 )
 
 install(TARGETS add DESTINATION lib/libadd_cpp)
-install(FILES ${headers} DESTINATION "${include_dest}/libadd_cpp")
+install(FILES ${headers} DESTINATION include/libadd_cpp)
