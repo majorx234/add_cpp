@@ -9,10 +9,10 @@ set(headers include/add.h)
 # set source files
 set(sources src/add.cpp)
 
-add_library (add SHARED
+add_library (add_cpp SHARED
   ${sources}
   ${headers}
 )
 
-install(TARGETS add DESTINATION lib)
+install(TARGETS add_cpp DESTINATION lib)
 install(FILES ${headers} DESTINATION include/libadd_cpp)
