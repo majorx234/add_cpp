@@ -1,5 +1,5 @@
 cmake_minimum_required (VERSION 2.8.11)
-project (HELLO)
+project (libadd_cpp)
 
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/include)
 
@@ -9,7 +9,7 @@ set(headers include/add.h)
 # set source files
 set(sources src/add.cpp)
 
-add_library (add 
+add_library (add SHARED
   ${sources}
   ${headers}
 )
