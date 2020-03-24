@@ -14,5 +14,5 @@ add_library (add SHARED
   ${headers}
 )
 
-install(TARGETS add DESTINATION lib/libadd_cpp)
+install(TARGETS add DESTINATION lib)
 install(FILES ${headers} DESTINATION include/libadd_cpp)
