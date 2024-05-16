@@ -18,6 +18,7 @@ target_sources(add_cpp
   ${headers}
 )
 
+# install part (optional)
 install(FILES ${headers} DESTINATION include/libadd_cpp)
 
 install(TARGETS
