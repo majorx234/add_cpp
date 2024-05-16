@@ -11,7 +11,9 @@ set(headers include/add.h)
 # set source files
 set(sources src/add.cpp)
 
-add_library (add_cpp SHARED
+add_library (add_cpp SHARED)
+target_sources(add_cpp
+ PRIVATE
   ${sources}
   ${headers}
 )
