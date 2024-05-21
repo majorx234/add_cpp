@@ -14,3 +14,11 @@ a small C++ project to show CMake
   `add_library` - specify target name + mark as shared lirbary (`*.so`)
 - set target sources:
   `target_sources` - add sorces files via defined variables
+## specify installation of library
+- four things need to be done for installation if an library
+  - build `*.so` file need to be copied in library path (`/usr/lib`)
+  - header files `*.h` need to be copied in include directory (`/usr/include`)
+  - pkg-config files `*.pc` need to be created and copied to pkgconfig directory (`/usr/share/pkgconfig`)
+    - TODO
+  - CMake files `*.cmake` need to be copied in cmake directory (`/usr/share/cmake`)
+    - implemented
