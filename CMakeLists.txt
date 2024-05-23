@@ -6,15 +6,14 @@ project (libadd_cpp
 
 include(GNUInstallDirs)
 
-include_directories(${CMAKE_CURRENT_SOURCE_DIR}/include)
-
 # set header files
-set(LIBADD_HEADERS include/add.h)
+set(LIBADD_HEADERS ${CMAKE_CURRENT_SOURCE_DIR}/include/add.h)
 
 # set source files
-set(LIBADD_SOURCES src/add.cpp)
+set(LIBADD_SOURCES ${CMAKE_CURRENT_SOURCE_DIR}/src/add.cpp)
 
 add_library (add_cpp SHARED)
+target_include_directories(add_cpp PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include)
 target_sources(add_cpp
  PRIVATE
   ${LIBADD_SOURCES}
@@ -25,7 +24,7 @@ target_sources(add_cpp
 install(FILES ${LIBADD_HEADERS} DESTINATION include/libadd_cpp)
 
 install(TARGETS
-        add_cpp
+    add_cpp
     EXPORT add_cppConfig
     ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR}
     LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
