@@ -22,3 +22,8 @@ a small C++ project to show CMake
     - TODO
   - CMake files `*.cmake` need to be copied in cmake directory (`/usr/share/cmake`)
     - implemented
+### 1. Build shared library
+- `add_library (add_cpp SHARED)` - defines that lib `add_cpp` will build as a shared lib,
+  - that means that other libs can dynically load it (dynamic linked)
+- `target_include_directories(add_cpp ...)` - defines headers search path
+- `target_sources(add_cpp ...)` - defines the sources (predefined within variables)
